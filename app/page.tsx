@@ -185,7 +185,7 @@ export default function Home() {
                 </li>
               </ul>
               <a className="hero-doc" href="#dr-ben">
-                <Image src="/images/dr-ben.jpg" alt="Dr. Edewor Ben Osevwe, DNP" width={64} height={64} preload />
+                <Image src="/images/dr-ben.jpg" alt="Dr. Edewor Ben Osevwe, DNP" width={96} height={96} preload />
                 <div>
                   <b>Led by Dr. Ben Osevwe, DNP</b>
                   <span>Clinical Director · Board Certified PMHNP-BC</span>
