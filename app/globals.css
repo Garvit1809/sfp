@@ -80,6 +80,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .assure{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:12px}
 .assure li{display:flex;gap:12px;align-items:flex-start}
 .assure svg{width:22px;height:22px;flex:none;margin-top:3px;color:var(--green)}
+.hero-doc{display:flex;gap:16px;align-items:center;margin-top:28px;padding:14px 22px 14px 14px;background:var(--tint);border:1px solid var(--sage-line);border-radius:var(--radius-pill);width:fit-content;max-width:100%;text-decoration:none;line-height:1.4;transition:border-color .15s}
+.hero-doc:hover{border-color:var(--teal)}
+.hero-doc img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--bg)}
+.hero-doc b{display:block;font-weight:600}
+.hero-doc span{font-size:.92rem;color:var(--ink-soft)}
 .hero-call{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
 .hero-call small{color:var(--ink-soft);font-size:.95rem}
 @media (max-width:920px){.hero-grid{grid-template-columns:1fr}}

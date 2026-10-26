@@ -184,6 +184,13 @@ export default function Home() {
                   No judgment, no rush
                 </li>
               </ul>
+              <a className="hero-doc" href="#dr-ben">
+                <Image src="/images/dr-ben.jpg" alt="Dr. Edewor Ben Osevwe, DNP" width={64} height={64} preload />
+                <div>
+                  <b>Led by Dr. Ben Osevwe, DNP</b>
+                  <span>Clinical Director · Board Certified PMHNP-BC</span>
+                </div>
+              </a>
               <div className="hero-call">
                 <CallLink className="btn btn-line" icon prefix="Call" />
                 <small>{HOURS}</small>
