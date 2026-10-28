@@ -1,24 +1,8 @@
 import Image from "next/image";
 import CallLink from "@/components/CallLink";
-import GetStartedFocus from "@/components/GetStartedFocus";
-import LeadForm, { type Concern } from "@/components/LeadForm";
+import IntakeQBooking from "@/components/IntakeQBooking";
 import { CheckIcon } from "@/components/icons";
-import { ADDRESS, HOURS } from "@/lib/site";
-
-const HERO_CONCERNS: Concern[] = [
-  { value: "Anxiety or stress", label: "Anxiety or stress" },
-  { value: "Feeling down or depressed", label: "Feeling down" },
-  { value: "Trouble sleeping", label: "Trouble sleeping" },
-  { value: "Focus / ADHD", label: "Focus / ADHD" },
-  { value: "Mood swings", label: "Mood swings" },
-  { value: "Medication help", label: "Help with medication" },
-  { value: "Alcohol or substance use", label: "Alcohol or substance use" },
-  { value: "Not sure yet", label: "Not sure yet" },
-];
-
-const FOOTER_CONCERNS: Concern[] = HERO_CONCERNS.filter(
-  (c) => c.value !== "Mood swings" && c.value !== "Alcohol or substance use",
-);
+import { ADDRESS, HOURS, INTAKEQ_BOOKING_URL } from "@/lib/site";
 
 const FEELINGS = [
   "My mind won’t switch off.",
@@ -86,7 +70,7 @@ const ADVANCED = [
 ];
 
 const STEPS = [
-  { title: "Tell us how to reach you", text: "Short form or a quick call. No referral needed." },
+  { title: "Pick a time that works", text: "Book online or give us a quick call. No referral needed." },
   { title: "We check your insurance", text: "We confirm coverage and book your time." },
   { title: "Start feeling better", text: "Meet your provider, often within 48 hours." },
 ];
@@ -151,7 +135,7 @@ export default function Home() {
           </a>
           <div className="head-actions">
             <a className="btn btn-line btn-callback" href="#get-started">
-              Request a callback
+              Book online
             </a>
             <CallLink className="btn btn-sun" icon />
           </div>
@@ -197,20 +181,16 @@ export default function Home() {
               </div>
             </div>
 
-            <LeadForm
-              id="get-started"
-              idPrefix="h"
-              title={
-                <>
-                  Get a call back <span className="hl">today</span>
-                </>
-              }
-              sub="Takes 30 seconds. We’ll call you back."
-              concerns={HERO_CONCERNS}
-              page="ads-landing"
-              showOrCall
-              thanksText={`Our team will call you shortly during office hours (${HOURS}). Want to talk sooner?`}
-            />
+            <div className="form-card booking-card" id="get-started">
+              <h2>
+                Book your visit <span className="hl">online</span>
+              </h2>
+              <p className="sub">Choose a time that works for you.</p>
+              <IntakeQBooking />
+              <div className="or-call">
+                or call now <CallLink />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -453,7 +433,7 @@ export default function Home() {
               <h2>
                 Your first step can be <span className="hl">today.</span>
               </h2>
-              <p className="lede">Leave your details or call us now.</p>
+              <p className="lede">Book online in a few clicks, or call us now.</p>
               <div className="cta-row">
                 <CallLink className="btn btn-light" prefix="Call" />
               </div>
@@ -463,14 +443,16 @@ export default function Home() {
               </div>
             </div>
 
-            <LeadForm
-              idPrefix="f"
-              title="Request a callback"
-              sub="We’ll reach out during office hours."
-              concerns={FOOTER_CONCERNS}
-              page="ads-landing-footer"
-              thanksText="Our team will call you shortly during office hours. Want to talk sooner?"
-            />
+            <div className="form-card">
+              <h2>Book an appointment</h2>
+              <p className="sub">See open times and pick the one that suits you.</p>
+              <a className="btn btn-sun" href="#get-started">
+                See available times
+              </a>
+              <p className="fine">
+                Prefer a full page? <a href={INTAKEQ_BOOKING_URL}>Open the booking page</a>
+              </p>
+            </div>
           </div>
         </section>
       </main>
@@ -478,7 +460,7 @@ export default function Home() {
       <footer>
         <div className="wrap">
           <p className="crisis">
-            <b>In crisis or thinking about harming yourself?</b> Please don’t wait for a callback. Call or text{" "}
+            <b>In crisis or thinking about harming yourself?</b> Please don’t wait for an appointment. Call or text{" "}
             <a href="tel:988">
               <b>988</b>
             </a>{" "}
@@ -500,11 +482,9 @@ export default function Home() {
       <div className="mbar">
         <CallLink className="btn btn-line">Call now</CallLink>
         <a className="btn btn-sun" href="#get-started">
-          Get a callback
+          Book online
         </a>
       </div>
-
-      <GetStartedFocus />
     </>
   );
 }

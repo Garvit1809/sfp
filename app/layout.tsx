@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fira_Sans, Young_Serif } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GTM_ID } from "@/lib/site";
 import "./globals.css";
 
 const firaSans = Fira_Sans({
@@ -35,7 +37,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${firaSans.variable} ${youngSerif.variable}`}
     >
-      <body>{children}</body>
+      <GoogleTagManager gtmId={GTM_ID} />
+      <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }
