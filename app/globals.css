@@ -123,6 +123,20 @@ legend{font-weight:500;font-size:.98rem;margin-bottom:10px;padding:0}
 .lead-form.done .form-body{display:none}
 .lead-form.done .thanks{display:block}
 
+/* Insurance strip */
+.ins{border-top:1px solid var(--sage-line);padding:28px 0 32px;overflow:hidden}
+.ins-label{text-align:center;font-size:.92rem;font-weight:500;color:var(--ink-soft);letter-spacing:.04em;margin:0 0 18px;padding:0 16px}
+.ins-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ins-track{display:flex;width:max-content;animation:ins-scroll 60s linear infinite}
+.ins-viewport:hover .ins-track{animation-play-state:paused}
+.ins-list{display:flex;align-items:center;gap:14px;list-style:none;margin:0;padding:0 14px 0 0}
+.ins-list li{flex:none;display:flex;align-items:center;height:56px;padding:0 22px;border:1px solid var(--sage-line);border-radius:var(--radius-pill);background:var(--surface)}
+.ins-list span{font-weight:600;font-size:1.02rem;color:var(--ink);white-space:nowrap;letter-spacing:.01em}
+.ins-list img{height:30px;width:auto}
+@keyframes ins-scroll{to{transform:translateX(-50%)}}
+@media (max-width:560px){.ins-track{animation-duration:45s}.ins-list li{height:48px;padding:0 18px}.ins-list span{font-size:.95rem}}
+@media (prefers-reduced-motion:reduce){.ins-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}.ins-list{flex-wrap:wrap;justify-content:center;gap:10px;padding:0 16px}.ins-list[aria-hidden]{display:none}.ins-viewport{-webkit-mask-image:none;mask-image:none}}
+
 /* Sound familiar */
 .feel{background:var(--tint);border-top:1px solid var(--sage-line);border-bottom:1px solid var(--sage-line)}
 .feel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;margin-top:40px;border-top:1px solid var(--sage-line)}

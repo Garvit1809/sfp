@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CallLink from "@/components/CallLink";
 import IntakeQBooking from "@/components/IntakeQBooking";
+import InsuranceMarquee from "@/components/InsuranceMarquee";
 import { CheckIcon } from "@/components/icons";
 import { ADDRESS, HOURS, INTAKEQ_BOOKING_URL } from "@/lib/site";
 
@@ -193,6 +194,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <InsuranceMarquee />
 
         {/* SOUND FAMILIAR */}
         <section className="section feel">
