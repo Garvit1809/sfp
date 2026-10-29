@@ -86,8 +86,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-doc img{width:96px;height:96px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--bg)}
 .hero-doc b{display:block;font-weight:600}
 .hero-doc span{font-size:.92rem;color:var(--ink-soft)}
-.hero-call{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
-.hero-call small{color:var(--ink-soft);font-size:.95rem}
 @media (max-width:920px){.hero-grid{grid-template-columns:1fr}}
 /* The IntakeQ widget is much taller than the hero copy, so keep the copy in view beside it */
 @media (min-width:921px){.hero-copy{position:sticky;top:calc(76px + 32px)}}
@@ -148,13 +146,12 @@ legend{font-weight:500;font-size:.98rem;margin-bottom:10px;padding:0}
 /* Services */
 .svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
 .svc-list{margin-top:44px;display:grid;gap:18px}
-.svc{display:grid;grid-template-columns:minmax(220px,.8fr) 1.4fr auto;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--sage-line);border-radius:var(--radius-md);padding:26px 28px}
+.svc{display:grid;grid-template-columns:minmax(220px,.8fr) 1.4fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--sage-line);border-radius:var(--radius-md);padding:26px 28px}
 .svc h3{margin:0}
 .svc .plain{margin:0 0 6px;font-size:1.05rem}
 .svc .clinical{margin:0;font-size:.92rem;color:var(--ink-soft)}
 .svc .clinical b{font-weight:600;color:var(--ink)}
-.svc .btn{padding:12px 20px;min-height:46px;font-size:.95rem;white-space:nowrap}
-@media (max-width:860px){.svc{grid-template-columns:1fr;gap:12px}.svc .btn{justify-self:start}}
+@media (max-width:860px){.svc{grid-template-columns:1fr;gap:12px}}
 
 /* Advanced treatments band */
 .adv{background:var(--teal-deep);color:var(--on-teal)}

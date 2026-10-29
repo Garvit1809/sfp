@@ -20,35 +20,30 @@ const SERVICES = [
     plain: "One visit to understand what’s going on and make a plan.",
     term: "Psychiatric evaluation:",
     clinical: "full diagnostic assessment and treatment plan.",
-    cta: "Book an evaluation",
   },
   {
     title: "The right medication, safely",
     plain: "Find what works, with regular check-ins.",
     term: "Medication management:",
     clinical: "evidence-based prescribing and monitoring.",
-    cta: "Get started",
   },
   {
     title: "Someone to talk it through with",
     plain: "Practical tools for stress, worry and low mood.",
     term: "Individual therapy:",
     clinical: "evidence-based psychotherapy.",
-    cta: "Book a session",
   },
   {
     title: "Support to cut back or quit",
     plain: "Private, judgment-free help with alcohol or drugs.",
     term: "Substance-use counseling:",
     clinical: "relapse prevention and recovery support.",
-    cta: "Get support",
   },
   {
     title: "See your provider from home",
     plain: "Same care by secure video, from home.",
     term: "Tele-psychiatry:",
     clinical: "secure virtual visits.",
-    cta: "Book a video visit",
   },
 ];
 
@@ -176,10 +171,6 @@ export default function Home() {
                   <span>Clinical Director · Board Certified PMHNP-BC</span>
                 </div>
               </a>
-              <div className="hero-call">
-                <CallLink className="btn btn-line" icon prefix="Call" />
-                <small>{HOURS}</small>
-              </div>
             </div>
 
             <div className="form-card booking-card" id="get-started">
@@ -211,12 +202,6 @@ export default function Home() {
               ))}
             </div>
             <p className="feel-close">If even one sounds familiar, let’s talk. It’s treatable.</p>
-            <div className="cta-row">
-              <a className="btn btn-sun" href="#get-started">
-                Talk to someone this week
-              </a>
-              <CallLink className="btn btn-line" prefix="Call" />
-            </div>
           </div>
         </section>
 
@@ -240,9 +225,6 @@ export default function Home() {
                       <b>{s.term}</b> {s.clinical}
                     </p>
                   </div>
-                  <a className="btn btn-line" href="#get-started">
-                    {s.cta}
-                  </a>
                 </div>
               ))}
             </div>
@@ -271,7 +253,6 @@ export default function Home() {
               <a className="btn btn-sun" href="#get-started">
                 Ask if you’re a good fit
               </a>
-              <CallLink className="btn btn-light" prefix="Call" />
             </div>
           </div>
         </section>
@@ -309,11 +290,6 @@ export default function Home() {
                   — Amina A., patient
                 </span>
               </p>
-              <div className="cta-row" style={{ marginTop: 8 }}>
-                <a className="btn btn-sun" href="#get-started">
-                  Book with Dr. Ben’s team
-                </a>
-              </div>
               <div className="team">
                 <div className="provider">
                   <Image
@@ -350,12 +326,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="cta-row">
-              <a className="btn btn-sun" href="#get-started">
-                Start step one now
-              </a>
-              <CallLink className="btn btn-line" prefix="Call" />
-            </div>
           </div>
         </section>
 
@@ -372,11 +342,6 @@ export default function Home() {
                   <p>{a.text}</p>
                 </div>
               ))}
-            </div>
-            <div className="cta-row">
-              <a className="btn btn-sun" href="#get-started">
-                Check my coverage
-              </a>
             </div>
           </div>
         </section>
@@ -398,11 +363,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="cta-row">
-              <a className="btn btn-sun" href="#get-started">
-                Get the same care
-              </a>
-            </div>
           </div>
         </section>
 
@@ -413,10 +373,7 @@ export default function Home() {
               <h2>
                 Common <span className="hl">questions</span>
               </h2>
-              <p className="lede">A quick call answers most of them.</p>
-              <div className="cta-row">
-                <CallLink className="btn btn-sun" prefix="Call" />
-              </div>
+              <p className="lede">Anything else? Call us and we’ll help.</p>
             </div>
             <div>
               {FAQS.map((f) => (
