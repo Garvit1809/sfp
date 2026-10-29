@@ -58,9 +58,9 @@ const ADVANCED = [
     tech: "FDA-cleared TMS for treatment-resistant depression.",
   },
   {
-    title: "Spravato® nasal spray",
+    title: "Nasal spray therapy",
     text: "A fast-acting nasal spray, given in our clinic under close monitoring.",
-    tech: "Esketamine for treatment-resistant depression.",
+    tech: "In-clinic treatment for treatment-resistant depression.",
   },
   {
     title: "StemWave",
